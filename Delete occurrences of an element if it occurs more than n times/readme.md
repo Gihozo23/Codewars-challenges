@@ -1,4 +1,5 @@
 # Delete occurrences of an element if it occurs more than n times
+# Day 2
 # Difficulty 6kyu
 
 Given a list and a number, create a new list that contains each number of list at most N times, without reordering.
