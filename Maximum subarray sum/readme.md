@@ -1,5 +1,6 @@
 # Maximum Subarray Sum
-#Level 5kyu
+# Day 1
+# Difficulty Level 5kyu
 
 
 The maximum sum subarray problem consists in finding the maximum sum of a contiguous subsequence in an array or list of integers:
