@@ -52,30 +52,29 @@
 // Create a function called extractNumbers that takes an array of strings that may contain numbers,
 //  and returns a new array of numbers extracted from the strings. If no numbers are included in a string the
 //   string will be converted into a 0.
-// @codeium ignore
-// let extractNumbers = (input) => {
-//     let arr = [];
-//     for (let element of input) {
-//         let numberFound =false;
-//         let numStr="";
-//         for(let char of element){
-//             if(!isNaN(char)){
-//                 numberFound=true;
-//                 numStr+=char;            
-//         }
-//     }
-//         if(numberFound){
-//             arr.push(parseInt(numStr));
-//     }
-//     else {
-//         arr.push(0);
-//     }
-// }
+let extractNumbers = (input) => {
+    let arr = [];
+    for (let element of input) {
+        let numberFound =false;
+        let numStr="";
+        for(let char of element){
+            if(!isNaN(char)){
+                numberFound=true;
+                numStr+=char;            
+        }
+    }
+        if(numberFound){
+            arr.push(parseInt(numStr));
+    }
+    else {
+        arr.push(0);
+    }
+}
     
-//     return arr;
-// }
+    return arr;
+}
 
-// console.log(extractNumbers(['2factor', '6nine'])); // returns [ 2, 6 ]
-// console.log(extractNumbers(['a26b', 'ca67c', 'n4f1r', 'dhaj'])); // returns [ 26, 67, 41, 0 ]
-// console.log(extractNumbers(['8atem2', 'cat', 'ran', '1'])); // returns [ 82, 0, 0, 1 ]
+console.log(extractNumbers(['2factor', '6nine'])); // returns [ 2, 6 ]
+console.log(extractNumbers(['a26b', 'ca67c', 'n4f1r', 'dhaj'])); // returns [ 26, 67, 41, 0 ]
+console.log(extractNumbers(['8atem2', 'cat', 'ran', '1'])); // returns [ 82, 0, 0, 1 ]
     
