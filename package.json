@@ -1,0 +1,12 @@
+{
+  "name": "codewars-challenges",
+  "version": "1.0.0",
+  "description": "",
+  "main": "IsInfiniteProcess.js",
+  "scripts": {
+    "w": "tsc --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
