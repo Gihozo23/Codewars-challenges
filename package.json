@@ -4,6 +4,7 @@
   "description": "",
   "main": "IsInfiniteProcess.js",
   "scripts": {
+    "start": "for file in *.js; do node \"$file\"; done",
     "w": "tsc --watch"
   },
   "keywords": [],

@@ -9,17 +9,15 @@ function getTheDate(timeStampOrMonth, day, y) {
 }
 console.log(getTheDate(9, 7, 2002));
 console.log(getTheDate(9493030));
-function add(a, b) {
-    if (typeof a === "string")
-        return a + b;
-    else if (typeof a === "number" && typeof b === "number")
-        return a + b;
-    else
-        return "";
-}
-;
-console.log(add("Hello", "there"));
-console.log(add(5, 8));
+// function add(a: string, b: string): string;
+// function add(a: number, b: number): number;
+// function add(a: number | string, b: number | string): number | string{
+//     if (typeof a === "string") return a + b;
+//     else if (typeof a === "number" && typeof b === "number") return a + b;
+//     else return "";
+// };
+// console.log(add("Hello", "there"))
+// console.log(add(5,8))
 // function makeDate(timestamp: number): Date;
 // function makeDate(m: number, d: number, y: number): Date;
 // function makeDate(mOrTimestamp: number, d?: number, y?: number): Date {
