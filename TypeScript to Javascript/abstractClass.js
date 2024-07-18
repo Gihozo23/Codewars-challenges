@@ -35,7 +35,7 @@ const p = new Person("ange", 34, 34);
 console.log(p.getName());
 const car = {
     make: "Benz",
-    model: "p34"
+    model: "p34",
 };
 const bus = {
     make: "Range",

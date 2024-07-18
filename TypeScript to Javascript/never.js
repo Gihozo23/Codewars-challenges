@@ -9,4 +9,4 @@ function thatThrowsAnError() {
     throw new Error("this is a trial");
 }
 let someVar = "one";
-someVar = thatThrowsAnError(); //this will work because type never is assigned to 
+someVar = thatThrowsAnError(); //this will work because type never is assigned to

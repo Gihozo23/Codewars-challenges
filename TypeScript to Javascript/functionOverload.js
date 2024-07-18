@@ -1,5 +1,6 @@
 "use strict";
 function getTheDate(timeStampOrMonth, day, y) {
+    //signature implementation
     if (day !== undefined && y !== undefined) {
         return new Date(y, timeStampOrMonth, day);
     }

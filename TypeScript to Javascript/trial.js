@@ -113,8 +113,8 @@ let answer = add(8, 9).length;
 console.log(len);
 function trial5(userData) {
     return {
-        "lastName": userData.lastName,
-        "age": userData.age
+        lastName: userData.lastName,
+        age: userData.age,
     };
 }
 function trial1(userData) {
@@ -129,15 +129,15 @@ const user2 = {
     age: 90,
     getPerson: function () {
         console.log(`My name is ${this.lastName}, I am ${this.age}`);
-    }
+    },
 };
 trial5({});
 // Readonly, nonnullable and exclude, extract( for union types only)
 function trial(userData) {
     //   userData.age = 3; // can't reassign the property because it is readonly
     return {
-        "lastName": userData.lastName,
-        "age": userData.age
+        lastName: userData.lastName,
+        age: userData.age,
     };
 }
 // console.log(trial({ lastName: "Marie", age: 90, getPerson(){} })
@@ -183,9 +183,9 @@ const youKnow = (a) => {
 youKnow("nigga");
 let neverMind;
 let str = "youKnow()";
-// neverMind =str can not assign never to string 
+// neverMind =str can not assign never to string
 // Type guards are used to narrow down the types in conditonal blocks
-//How to use abstract class 
+//How to use abstract class
 class Computer {
     constructor() {
         this.id = 0;
@@ -218,7 +218,7 @@ const y = new Person3("ange", 34, 34);
 console.log(p.getName());
 const car1 = {
     make: "Benz",
-    model: "p34"
+    model: "p34",
 };
 const bus1 = {
     make: "Range",

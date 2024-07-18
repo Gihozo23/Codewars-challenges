@@ -31,10 +31,10 @@ function logId(id) {
 }
 logId(["string", "number"]);
 const getAlbumYear = (year) => {
-    if (typeof year === 'string') {
+    if (typeof year === "string") {
         console.log(`The album was released in ${year}.`); // `year` is string
     }
-    else if (typeof year === 'number') {
+    else if (typeof year === "number") {
         console.log(`The album was released in ${year}.`); // `year` is number | boolean
     }
     console.log(year); // `year` is string | number | boolean
@@ -44,7 +44,7 @@ const fn = (input) => {
     throw new Error("HEL");
 };
 // Anything is assignable to unknown!
-fn('hello');
+fn("hello");
 fn(42);
 fn(true);
 fn({});

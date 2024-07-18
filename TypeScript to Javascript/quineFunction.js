@@ -9,27 +9,27 @@ const addUID = (obj) => {
     return Object.assign(Object.assign({}, obj), { uid });
 };
 exports.addUID = addUID;
-// let doc2 = addUID([6, 7, 6, 5, 4, 3]) after including that T extends {name: string} this becomes an error but if we say that it extends object the error will be done 
+// let doc2 = addUID([6, 7, 6, 5, 4, 3]) after including that T extends {name: string} this becomes an error but if we say that it extends object the error will be done
 // console.log(doc2)
 let docOne = (0, exports.addUID)({ name: "yoshi", age: 40 });
 console.log(docOne.name);
 const someUser = {
     name: "Mireille",
     age: 89,
-    address: "Kibungo"
+    address: "Kibungo",
 };
 const myUser = {
     name: "Mike",
     age: 16,
-    address: ["Nyamirambo", "Nyarugenge"]
+    address: ["Nyamirambo", "Nyarugenge"],
 };
 function getUsername(username) {
     if (username !== null) {
         return `User: ${username}`;
     }
     else {
-        return 'Guest';
+        return "Guest";
     }
 }
-const result = getUsername('Alice');
+const result = getUsername("Alice");
 const result2 = getUsername(null);
