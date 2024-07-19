@@ -1,7 +1,7 @@
-const letter = "Merde"; 
-const number = 8 // when you use const without assigning a type, the assigned value becomes the type
+const letter = "Merde";
+const number = 8; // when you use const without assigning a type, the assigned value becomes the type
 
-let alpabet ="abc... "; 
+let alpabet = "abc... ";
 let num = 9; // when you use let without assigning a type, type inference is immediately done
 
 let someVar1: cher = "one";
@@ -11,7 +11,7 @@ let som: never;
 type cher = "one" | "two" | "three";
 
 function thatThrowsAnError(): never {
-    throw new Error("this is a trial")
+  throw new Error("this is a trial");
 }
 let someVar: cher = "one";
-someVar = thatThrowsAnError() //this will work because type never is assigned to 
+someVar = thatThrowsAnError(); //this will work because type never is assigned to

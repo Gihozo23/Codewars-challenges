@@ -4,7 +4,7 @@ type BooleansStringNumber = [...boolean[], string, number];
 const a: StringNumberBooleans = ["hello", 1];
 const b: StringNumberBooleans = ["beautiful", 2, true];
 const c: StringNumberBooleans = ["world", 3, true, false, true, false, true];
-const d: StringBooleansNumber = ["Hey", 9]
+const d: StringBooleansNumber = ["Hey", 9];
 
 // let obj: unknown = { x: 0 };
 // obj = { y: 9 };
@@ -104,8 +104,6 @@ const d: StringBooleansNumber = ["Hey", 9]
 //   // age : 9
 // }
 
-
-
 // function whoAmI(user: Users): string{
 //   return `My name is ${user.lastName} ${user.firstName} and I am ${user.age} years old, nice to meet you!`;
 // }
@@ -141,7 +139,6 @@ console.log(len);
 // }
 // console.log(typeof names);
 
-
 // how to use Partial, Omit and Pick
 interface Person1 {
   firstName: string;
@@ -149,16 +146,17 @@ interface Person1 {
   age: number;
   getPerson(): void;
 }
-function trial5(userData: Partial<Person1>): {}{
+function trial5(userData: Partial<Person1>): {} {
   return {
-    "lastName": userData.lastName,
-    "age": userData.age };
+    lastName: userData.lastName,
+    age: userData.age,
+  };
 }
-function trial1(userData: Pick<Person1, "lastName" | "firstName">) :string {
-  return `${userData.firstName} and ${userData.lastName}`
+function trial1(userData: Pick<Person1, "lastName" | "firstName">): string {
+  return `${userData.firstName} and ${userData.lastName}`;
 }
-function trial2(userData: Pick<Person1, "lastName" | "firstName">) : string{
-  return `${userData.firstName}`
+function trial2(userData: Pick<Person1, "lastName" | "firstName">): string {
+  return `${userData.firstName}`;
 }
 
 const user2 = {
@@ -166,31 +164,31 @@ const user2 = {
   lastName: "Lepen",
   age: 90,
   getPerson: function () {
-    console.log(`My name is ${this.lastName}, I am ${this.age}`)
-  }
-}
-trial5({})
+    console.log(`My name is ${this.lastName}, I am ${this.age}`);
+  },
+};
+trial5({});
 
 // Readonly, nonnullable and exclude, extract( for union types only)
 
-function trial(userData: Readonly<Person1>): {}{
-//   userData.age = 3; // can't reassign the property because it is readonly
+function trial(userData: Readonly<Person1>): {} {
+  //   userData.age = 3; // can't reassign the property because it is readonly
 
   return {
-    "lastName": userData.lastName,
-    "age": userData.age };
+    lastName: userData.lastName,
+    age: userData.age,
+  };
 }
 
-type Josuette = "string" | "number" | "boolean"
-type PickyNigga = Extract<Josuette, "string" | "boolean">
-
+type Josuette = "string" | "number" | "boolean";
+type PickyNigga = Extract<Josuette, "string" | "boolean">;
 
 type Josuette1 = "string" | "number" | "boolean" | undefined | null;
 
-type pickyNigga = NonNullable<Josuette>
+type pickyNigga = NonNullable<Josuette>;
 
-type Josuette2 = "string" | "number" | "boolean"
-type PickyNigga2 = Extract<Josuette, "string" | "boolean">
+type Josuette2 = "string" | "number" | "boolean";
+type PickyNigga2 = Extract<Josuette, "string" | "boolean">;
 
 // console.log(trial({ lastName: "Marie", age: 90, getPerson(){} })
 // )
@@ -214,13 +212,12 @@ const parsedObject = JSON.parse(jsonString);
 
 //enums
 enum myGroup {
-    b,
+  b,
   name,
-  
 }
-const dfgh: myGroup = 0
-const arr =[9,9,0]
-const me: myGroup = myGroup.name
+const dfgh: myGroup = 0;
+const arr = [9, 9, 0];
+const me: myGroup = myGroup.name;
 
 // function smaller(nums: number[]): number[] {
 //   let count = 0;
@@ -233,14 +230,13 @@ const me: myGroup = myGroup.name
 //       }
 //       result.push(count);
 //       count = 0;
-      
+
 //   }
 //   console.log(result)
 //   return result;
 // }
 // smaller([5, 4, 3, 2, 1]);
 // // smaller( [1, 2, 0])
-
 
 //Type Narrowing is the process of narrowing down the types in conditonal blocks
 type Pc = "mac" | "windows";
@@ -249,78 +245,76 @@ type Phone = "ios" | "android";
 function buy(device: Pc | Phone) {
   if (device === "windows" || "mac") {
     return `${device} is Pc`;
+  } else {
+    return `${device} is Phone`;
   }
-  else {
-    return `${device} is Phone`
-  }
-} 
-console.log(buy("mac"))
-
-const youKnow = (a : "nigga" | string) => {
-    throw new Error("HUmmm")
 }
-youKnow("nigga")
+console.log(buy("mac"));
+
+const youKnow = (a: "nigga" | string) => {
+  throw new Error("HUmmm");
+};
+youKnow("nigga");
 let neverMind: never;
 let str: string = "youKnow()";
-// neverMind =str can not assign never to string 
+// neverMind =str can not assign never to string
 
 // Type guards are used to narrow down the types in conditonal blocks
-//How to use abstract class 
+//How to use abstract class
 abstract class Computer {
-    readonly id:number=0
-    abstract brand:string;
-    abstract ram:number;
-    storage?:number
-    abstract upgrade(num:number):number
-    
-    }
-    class laptop implements Computer{
-        name:string
-        constructor(name:string){
-        this.name=name
-        }
-     id=2
-    brand="hp"
-    ram=34
-    upgrade(num:number):number{
-        return 0
-    }
-    }
-    const ipad = new laptop("lenevo");
-console.log(ipad.id)
-    
-class Person3{
-        public name:string;
-        private age:number;
-        protected num:number;
-        constructor(name:string,age:number,numb:number){
-            this.name=name;
-            this.age=age
-            this.num = numb
-        }
-        getName():string|number{
-            return `${this.name} ${this.age} ${this.num}`
-        }
-    }
-    const  y= new Person3("ange",34,34);
-    console.log(p.getName());
-// Write a TypeScript program that creates a function combine that accepts two parameters of types boolean and number. It returns a value that can be either a boolean or a number. Use a union type to achieve this.  
-    interface Car1 {
-        make:string;
-        model:string;
-    }
-    type Bus1= {
-        make:string;
-        model:string;
-        payload?:number
-    }
-    type Vehicle1 = Bus1|Car
-    const car1:Car1={
-        make:"Benz",
-        model:"p34"
-    }
-    const bus1:Bus1={
-        make:"Range",
-        model:"rava",
-    }
-    const vehicle11:Vehicle1[]=[car1,bus1]
+  readonly id: number = 0;
+  abstract brand: string;
+  abstract ram: number;
+  storage?: number;
+  abstract upgrade(num: number): number;
+}
+class laptop implements Computer {
+  name: string;
+  constructor(name: string) {
+    this.name = name;
+  }
+  id = 2;
+  brand = "hp";
+  ram = 34;
+  upgrade(num: number): number {
+    return 0;
+  }
+}
+const ipad = new laptop("lenevo");
+console.log(ipad.id);
+
+class Person3 {
+  public name: string;
+  private age: number;
+  protected num: number;
+  constructor(name: string, age: number, numb: number) {
+    this.name = name;
+    this.age = age;
+    this.num = numb;
+  }
+  getName(): string | number {
+    return `${this.name} ${this.age} ${this.num}`;
+  }
+}
+const y = new Person3("ange", 34, 34);
+console.log(p.getName());
+// Write a TypeScript program that creates a function combine that accepts two parameters of types boolean and number. It returns a value that can be either a boolean or a number. Use a union type to achieve this.
+interface Car1 {
+  make: string;
+  model: string;
+}
+type Bus1 = {
+  make: string;
+  model: string;
+  payload?: number;
+};
+type Vehicle1 = Bus1 | Car;
+const car1: Car1 = {
+  make: "Benz",
+  model: "p34",
+};
+const bus1: Bus1 = {
+  make: "Range",
+  model: "rava",
+};
+const vehicle11: Vehicle1[] = [car1, bus1];
