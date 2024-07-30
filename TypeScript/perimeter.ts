@@ -1,23 +1,36 @@
-export const perimeter = (n:number):number => {
-    if (n <= 1) return 1;
-    let arr = [];
-    let result = 0;
-    console.log(arr.push(perimeter(n - 1), perimeter(n - 2)));
-    let i = n;
-    while(i > 0){
-        result = perimeter(i - 1) + perimeter(i - 2);
-        arr.push(result);
-        result = 0;
+export const perimeter = (n: number): number => {
+    let fibonacciSum = 0;
+    let currentValue = 1;
+    let previousValue = 0;
+    for(let i = 0; i<=n;i++){
+    fibonacciSum+= currentValue;
+        [previousValue, currentValue] = [currentValue, previousValue + currentValue];
     }
-    console.log(arr);
-    return 3;
+    return fibonacciSum * 4;
+
+    //another way
+//     let result: number;
+//     let arr: number[] = [];
+//     const generateFibonacci = (n:number):number => {
+//     if (n <= 1) return 1;
+//     return generateFibonacci(n - 1)+ generateFibonacci(n - 2);
+// }
+//     for (let i = n; i >= 0; i--){
+//         result = generateFibonacci(i);
+//         arr.push(result);
+//     }
+//      result = arr.reduce((accumulator, currentValue) => accumulator + currentValue,
+//     0
+//   );
+
+//     return result*4;
 }
 
 console.log(perimeter(1));
-console.log(perimeter(2));
-console.log(perimeter(3));
-console.log(perimeter(4));
-console.log(perimeter(5));
+// console.log(perimeter(2));
+// console.log(perimeter(3));
+console.log(perimeter(7));
+// console.log(perimeter(5));
 
 
 
