@@ -1,16 +1,75 @@
-function getTheDate(timeStamp: number): Date; // overload signature
+
+/** Function overloading in TS : it is the ability to create multiple functions of the same name 
+with different implementations.
+
+1. Overload signature: is a declaration of a function's parameters and return type, but without an actual implementation.
+
+1. Signature implementation : is the actual implementation of the function that handles all the overloads. 
+
+
+Let's see an example:
+*/
+function getTheDate(timeStamp: number): Date;// overload signature
 function getTheDate(month: number, day: number, y: number): Date; // overload signature
-function getTheDate(timeStampOrMonth: number, day?: number, y?: number): Date {
+function getTheDate(timeStampOrMonth: number, day?: number, y?: number): Date
+{
   //signature implementation
-  if (day !== undefined && y !== undefined) {
+  if (day !== undefined && y !== undefined) { 
     return new Date(y, timeStampOrMonth, day);
-  } else {
+
+  }
+  else {
     return new Date(timeStampOrMonth);
   }
-}
-console.log(getTheDate(9, 7, 2002));
 
+}
+console.log(getTheDate(2000,8,9));
 console.log(getTheDate(9493030));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // function add(a: string, b: string): string;
 // function add(a: number, b: number): number;
