@@ -5,6 +5,8 @@
 
 //global scope:
 
-
+var first = "Declared with var";
+console.log(first);
+console.log(first)
 
 
