@@ -9,12 +9,12 @@ var first = "Declared with var";
 console.log(first);
 console.log(first)
 //functional scope:
-console.log(first)
-function seeHoisting() {
-    console.log(first)
-    var first = "Declared with var";
-    console.log(first)
-    return "I have global scope"
-}
-seeHoisting()
+// console.log(first)
+// function seeHoisting() {
+//     console.log(first)
+//     var first = "Declared with var";
+//     console.log(first)
+//     return "I have global scope"
+// }
+// seeHoisting()
 
